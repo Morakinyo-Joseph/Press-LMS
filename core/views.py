@@ -1,9 +1,4 @@
 from datetime import datetime, timedelta
-from email import message
-from itertools import count
-from msilib.schema import ServiceControl
-from operator import le
-from turtle import left
 from django.shortcuts import render, redirect
 
 from .models import BorrowedBook, Membership, Notification, Book, Copy, ReturnCount

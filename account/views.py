@@ -33,7 +33,8 @@ def logging_in(request):
     if request.user.is_authenticated:
         return redirect("core:book_list")
 
-    key = ['psgladmin', '11111111']
+    usernaming = "psgladmin"
+    passing = "11111111"
 
     if request.method == "POST":
         username = request.POST['Username']
@@ -49,7 +50,7 @@ def logging_in(request):
             return redirect('account:login')
 
 
-    return render(request, "account/login.html", {"key": key})
+    return render(request, "account/login.html", {"username": usernaming, "password": passing})
 
 
 def logging_out(request):

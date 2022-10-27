@@ -42,13 +42,15 @@
     </div>
 {% endfor %}
 
+Username: {{ username }}
+    <br>    
+Password: {{ password }}
+    <br>
+
 
 <div class="login-form m-auto">
 
-    Username: {{ username }}
-    <br>    
-    Password: {{ password }}
-    <br>
+    
 
     <form class="form-center" action="", method="post">
         {% csrf_token %}

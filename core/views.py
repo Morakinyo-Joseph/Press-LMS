@@ -57,8 +57,8 @@ def member_list(request):
 @login_required
 def member_create(request):
     current_user = request.user
-
     form = MembershipCreationForm()
+
     if request.method == "POST":
         form = MembershipCreationForm(request.POST, request.FILES)
         if form.is_valid():
